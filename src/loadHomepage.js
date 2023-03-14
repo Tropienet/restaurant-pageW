@@ -1,4 +1,5 @@
-import PizzaSlice from "./pizza_slice.jpg"
+import loadHomeInfo from "./home";
+import clearDisplay from "./clearDisplay";
 
 function loadHomepage() {
     const container = document.querySelector("#content");
@@ -7,6 +8,9 @@ function loadHomepage() {
     const homeBtn = document.createElement("div");
     const menuBtn = document.createElement("div");
     const contactBtn = document.createElement("div");
+
+    const pageContainer = document.createElement("div");
+    pageContainer.classList.add("page-container")
 
     header.classList.add("header")
     
@@ -29,16 +33,20 @@ function loadHomepage() {
     }
 
     homeBtn.addEventListener("click", () => {
+        clearDisplay(pageContainer);
         removeActiveClass();
         addActiveClass(homeBtn);
+        loadHomeInfo();
     });
 
     menuBtn.addEventListener("click", () => {
+        clearDisplay(pageContainer);
         removeActiveClass();
         addActiveClass(menuBtn);
     });
 
     contactBtn.addEventListener("click", () => {
+        clearDisplay(pageContainer);
         removeActiveClass();
         addActiveClass(contactBtn);
     });
@@ -48,6 +56,7 @@ function loadHomepage() {
     header.appendChild(contactBtn);
 
     container.appendChild(header);
+    container.appendChild(pageContainer);
 }
 
 export default loadHomepage;
