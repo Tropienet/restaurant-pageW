@@ -1,1 +1,4 @@
-console.log("SEtup worked");
+import "./styles.css";
+import loadHomepage from "./loadHomepage";
+
+loadHomepage();
