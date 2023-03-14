@@ -1,7 +1,10 @@
 import loadHomeInfo from "./home";
+import loadContactInfo from "./contact";
+import loadMenuInfo from "./menu";
 import clearDisplay from "./clearDisplay";
 
 function loadHomepage() {
+
     const container = document.querySelector("#content");
 
     const header = document.createElement("div");
@@ -43,12 +46,14 @@ function loadHomepage() {
         clearDisplay(pageContainer);
         removeActiveClass();
         addActiveClass(menuBtn);
+        loadMenuInfo();
     });
 
     contactBtn.addEventListener("click", () => {
         clearDisplay(pageContainer);
         removeActiveClass();
         addActiveClass(contactBtn);
+        loadContactInfo();
     });
 
     header.appendChild(homeBtn);
@@ -57,6 +62,8 @@ function loadHomepage() {
 
     container.appendChild(header);
     container.appendChild(pageContainer);
+
+    loadHomeInfo();
 }
 
 export default loadHomepage;
