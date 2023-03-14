@@ -60,3 +60,14 @@ body {
     padding: 50px;
     border-radius: 12px;
 }
+
+.menu-img {
+    width: 180px;
+    height: auto;
+}
+
+.menu-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-left: 50px;
+}
