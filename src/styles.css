@@ -45,7 +45,8 @@ body {
     background-color: #2B193D;
 }
 
-.contact-page {
+.contact-page, 
+.restaurant-info {
     display: flex;
     flex-direction: column;
     justify-content: center;
